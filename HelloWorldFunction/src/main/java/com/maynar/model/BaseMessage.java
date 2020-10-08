@@ -1,4 +1,4 @@
-package helloworld.model;
+package com.maynar.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

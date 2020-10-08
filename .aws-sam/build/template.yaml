@@ -13,7 +13,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: HelloWorldFunction
-      Handler: helloworld.App::handleRequest
+      Handler: com.maynar.App::handleRequest
       Runtime: java11
       MemorySize: 512
       Environment:

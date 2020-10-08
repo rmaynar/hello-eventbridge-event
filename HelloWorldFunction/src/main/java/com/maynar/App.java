@@ -1,10 +1,10 @@
-package helloworld;
+package com.maynar;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import helloworld.model.BaseMessage;
+import com.maynar.model.BaseMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import software.amazon.awssdk.http.urlconnection.UrlConnectionHttpClient;
@@ -28,7 +28,7 @@ public class App implements RequestHandler<BaseMessage, String> {
     public String handleRequest(BaseMessage mesage, Context context) {
 
         final String EVENT_DETAILS = "{\"message\":\"Hello world !\"}";
-        LOGGER.info("Inside lambda habdle request.....");
+        LOGGER.info("Inside lambda handle request.....");
 
         EventBridgeClient eventBridgeClient =
                 EventBridgeClient.builder()
